@@ -1,0 +1,7 @@
+---
+redmine:
+  db_postgres: private-db-ams-1-do-user-14683187-0.b.db.ondigitalocean.com
+  db_port: 25060
+  db_username: doadmin
+  db_password: "{{ encrypted.db_password }}"
+  db_database: defaultdb
