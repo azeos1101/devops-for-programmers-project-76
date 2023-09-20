@@ -1,0 +1,5 @@
+# - name: Setting up Datadog agent
+#   hosts: all
+#   gather_facts: false
+#   tasks:
+    # - datadog.datadog
