@@ -1,0 +1,13 @@
+- hosts: all
+  tasks:
+    - name: Install pip
+      ansible.builtin.apt:
+        name: pip
+        state: present
+        update_cache: yes
+    - name: Install pip packages
+      include_role:
+        name: geerlingguy.pip
+      vars:
+        pip_install_packages:
+          - docker
