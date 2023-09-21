@@ -1,6 +1,5 @@
 - name: Setup packages
   hosts: all
-  gather_facts: false
   tasks:
     - name: update packages cache
       ansible.builtin.apt:

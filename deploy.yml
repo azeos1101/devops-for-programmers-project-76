@@ -1,6 +1,5 @@
 - name: Deploy redmine
   hosts: all
-  gather_facts: false
   serial: 1
   tasks:
     - name: create environment variables from template
