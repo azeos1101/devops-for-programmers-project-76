@@ -5,3 +5,7 @@ redmine:
   db_username: doadmin
   db_password: "{{ encrypted.db_password }}"
   db_database: defaultdb
+
+datadog_api_key: "{{ encrypted.datadog_api_key }}"
+datadog_site: datadoghq.eu
+website_url: devops.pimbi.icu

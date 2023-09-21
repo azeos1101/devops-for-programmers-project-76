@@ -1,8 +1,8 @@
-- ansible.builtin.import_playbook: playbooks/setup_packages.yml
+- ansible.builtin.import_playbook: setup_packages.yml
 
-- ansible.builtin.import_playbook: playbooks/deploy.yml
+- ansible.builtin.import_playbook: deploy.yml
 
-# - ansible.builtin.import_playbook: playbooks/datadog.yml
+- ansible.builtin.import_playbook: datadog.yml
 
 
 
