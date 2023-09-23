@@ -26,13 +26,13 @@ vault_secrets:
 
 # Playbooks
 install_packages:
-	ansible-playbook -v setup_packages.yml -i inventory.yml $(vault_decrypt)
+	ansible-playbook -v playbook.yml -i inventory.yml $(vault_decrypt) -t setup
 
 deploy:
-	ansible-playbook -v deploy.yml -i inventory.yml $(vault_decrypt)
+	ansible-playbook -v playbook.yml -i inventory.yml $(vault_decrypt) -t deploy
 
 datadog:
-	ansible-playbook -v datadog.yml -i inventory.yml $(vault_decrypt)
+	ansible-playbook -v playbook.yml -i inventory.yml $(vault_decrypt) -t datadog
 
 play:
 	ansible-playbook -v playbook.yml -i inventory.yml $(vault_decrypt)

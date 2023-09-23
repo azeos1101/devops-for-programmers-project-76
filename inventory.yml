@@ -6,3 +6,6 @@ webservers:
     web2:
       ansible_host: 206.189.103.242
       ansible_user: root
+    web3:
+      ansible_host: 165.232.88.243
+      ansible_user: root

@@ -3,11 +3,13 @@
   serial: 1
   tasks:
     - name: create environment variables from template
+      tags: deploy
       ansible.builtin.template:
         src: environment.j2
         dest: /var/tmp/redmine.env
 
     - name: run container
+      tags: deploy
       community.docker.docker_container:
         name: redmine
         image: redmine:latest

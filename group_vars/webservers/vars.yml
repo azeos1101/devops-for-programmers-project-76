@@ -6,6 +6,14 @@ redmine:
   db_password: "{{ encrypted.db_password }}"
   db_database: defaultdb
 
+website_url: devops.pimbi.icu
 datadog_api_key: "{{ encrypted.datadog_api_key }}"
 datadog_site: datadoghq.eu
-website_url: devops.pimbi.icu
+datadog_checks:
+  http_check:
+    init_config:
+
+    instances:
+      - name: Hexlet DevOps Study website
+        url: https://{{ website_url }}/
+        method: GET
