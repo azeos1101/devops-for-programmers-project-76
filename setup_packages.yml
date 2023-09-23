@@ -6,15 +6,6 @@
       ansible.builtin.apt:
         update_cache: yes
 
-    - name: Install docker
-      tags: setup
-      include_role:
-        name: geerlingguy.docker
-      vars:
-        docker_edition: 'ce'
-        docker_install_compose: true
-        docker_packages_state: present
-
     - name: Install pip and packages
       tags: setup
       include_role:
